@@ -134,7 +134,7 @@ body{
 
 /*** Navbar ***/
 .navbar-light .navbar-nav .nav-link {
-    margin-right: 25px;
+    margin-right: 35px;
     padding: 35px 0;
     color: var(--bs-dark) !important;
     font-size: 16px;
@@ -143,7 +143,35 @@ body{
     transition: .5s;
 
 
+
 }
+.navbar {
+    display: flex;
+    justify-content: center; /* Center everything horizontally */
+    align-items: center; /* Align items vertically in the navbar */
+    padding: 0 20px; /* Optional: add padding */
+}
+
+.navbar-brand {
+    margin-right: auto; /* Push logo to the far left */
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: center; /* Center links within the navbar */
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        justify-content: flex-start; /* Adjust for mobile view */
+    }
+}
+
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
     padding: 20px 0;
@@ -205,6 +233,7 @@ body{
     transition: 0.5s;
  
 }
+
 
 @media (max-width: 992px) {
     nav.bg-transparent {
@@ -985,48 +1014,7 @@ body{
     background: var(--bs-dark) !important;
 }
 /*** copyright end ***/
-.counter {
-    background-color: #333333;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
 
-.counter:hover {
-    transform: translateY(-10px);
-}
-
-.counter h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.counter p {
-    font-size: 1.1rem;
-    color: #666;
-}
-
-.counter-value {
-    color: #15c1c3;
-}
-
-/* Counter Animation */
-@keyframes counterUp {
-    0% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.counter-up {
-    animation: counterUp 1s ease-in-out forwards;
-}
 /* General styling for floating buttons */
 .floating-buttons {
     position: fixed;
@@ -1237,5 +1225,238 @@ video:hover {
 
     .popup p {
         font-size: 1rem;
+    }
+}
+.passion-section {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+}
+
+.passion-section h1 {
+    font-size: 2.5rem; /* Adjust size for responsiveness */
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.passion-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.passion-section svg {
+    max-width: 100%;
+    height: auto;
+    animation: pulse 2s infinite;
+}
+
+/* Button Styling */
+.passion-section .btn {
+    border: 2px solid #dc3545; /* Neon green border */
+    color: #dc3545;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.passion-section .btn:hover {
+    background-color: #dc3545;
+    color: #000;
+}
+
+/* Heartbeat Animation for SVG */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+  /* Counter Section Styles */
+  .counter-section {
+    background-color: #000; /* Dark background */
+    padding: 50px 0;
+    font-family: "Arial", sans-serif;
+  }
+
+  .counter-item {
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  /* Numbers */
+  .counter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #dc3545; /* Red color for numbers */
+    margin-bottom: 10px;
+  }
+
+  /* Subtitles */
+  .counter-item p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #ccc; /* Subtle gray for subtitles */
+  }
+
+  /* Grid Lines */
+  .counter-item:after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle divider line */
+  }
+
+  .counter-item:last-child:after {
+    display: none; /* No line for the last item */
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .counter {
+      font-size: 2.5rem;
+    }
+
+    .counter-item p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .counter {
+      font-size: 2rem;
+    }
+
+    .counter-item p {
+      font-size: 0.9rem;
+    }
+  }
+   /* Carousel Styling */
+   #videoCarousel {
+    height: 100vh; /* Adjust height for all devices */
+    overflow: hidden; /* Prevent extra content overflow */
+    margin: 0; /* Reset margins */
+    padding: 0; /* Reset padding */
+    position: relative; /* Keep text positioned properly */
+}
+
+#videoCarousel video {
+    object-fit: cover; /* Ensure video covers the container */
+    width: 100%;
+    height: 100%;
+}
+
+/* Text Overlay Styling */
+.carousel-caption {
+    position: absolute;
+    bottom: 10%; /* Position text closer to the bottom */
+    left: 5%; /* Align text to the left */
+    text-align: left;
+    max-width: 90%;
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+}
+
+.carousel-caption h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 15px;
+}
+
+.carousel-caption a {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    background: #ff4141;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+   
+}
+.carousel-caption {
+    position: absolute;
+    bottom: 25%; /* Raise the caption higher (default was 10%) */
+    left: 5%; /* Keep aligned to the left */
+    text-align: left;
+    max-width: 90%;
+    margin: 0; /* Ensure no extra margin */
+    padding: 0; /* Reset padding */
+}
+.carousel-caption a:hover {
+    background: #e63939;
+    text-decoration: underline;
+}
+
+/* Fix for Small Screens */
+@media (max-width: 768px) {
+    #videoCarousel {
+        height: 25vh; /* Reduce height for smaller screens */
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-caption {
+        bottom: 15%; /* Slightly raise text */
+        left: 3%; /* Reduce left padding */
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.2rem;
+    }
+}
+.partner-logos-scrolling {
+    overflow: hidden; /* Ensure content outside container is hidden */
+    position: relative;
+    background-color: #000000; /* Optional background color */
+}
+
+.logos-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    white-space: nowrap; /* Prevent wrapping of logos */
+    animation: scrollLeft 20s linear infinite; /* Smooth scroll effect */
+}
+
+.logos {
+    display: flex;
+    gap: 2rem; /* Adjust spacing between logos */
+}
+
+.logos img {
+    max-height: 60px; /* Set logo height */
+    width: auto; /* Maintain aspect ratio */
+    opacity: 0.8; /* Slight transparency for logos */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.logos img:hover {
+    opacity: 1; /* Highlight logo on hover */
+}
+
+@keyframes scrollLeft {
+    from {
+        transform: translateX(0); /* Start position */
+    }
+    to {
+        transform: translateX(-100%); /* Scroll to the left */
     }
 }
