@@ -141,35 +141,6 @@ body{
     font-weight: 400;
     outline: none;
     transition: .5s;
-
-
-
-}
-.navbar {
-    display: flex;
-    justify-content: center; /* Center everything horizontally */
-    align-items: center; /* Align items vertically in the navbar */
-    padding: 0 20px; /* Optional: add padding */
-}
-
-.navbar-brand {
-    margin-right: auto; /* Push logo to the far left */
-}
-
-.navbar-collapse {
-    display: flex;
-    justify-content: center; /* Center links within the navbar */
-}
-
-.navbar-nav {
-    display: flex;
-    gap: 20px; /* Space between links */
-}
-
-@media (max-width: 991px) {
-    .navbar-collapse {
-        justify-content: flex-start; /* Adjust for mobile view */
-    }
 }
 
 
@@ -1061,10 +1032,7 @@ body{
 .call-btn:hover {
     background-color: #0056b3;
 }
-.gallery {
-    
-  
-}
+
 
 .gallery-tabs {
     display: flex;
@@ -1449,3 +1417,37 @@ video:hover {
         transform: translateX(-100%); /* Scroll to the left */
     }
 }
+
+
+.consultation-wrapper {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    font-family: Arial, sans-serif;
+}
+
+.offer-box {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 800px;
+    
+    border-radius: 15px;
+}
+
+.offer-heading {
+    color: #ffffff;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.offer-description {
+    color: #ffffff;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+

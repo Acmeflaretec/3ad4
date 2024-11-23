@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>3AD4</title>
+        <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Rubik:wght@400;500&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            /* Section Styling */
+.service-offerings-section {
+    background-color: #000000; /* Dark background color */
+    color: #ffffff; /* Text color */
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Grid Pattern Background */
+.service-offerings-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 1;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Headings */
+.service-offerings-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.service-offerings-section h1 span {
+    color: #ca2828; /* Dynamic Green Color */
+}
+
+/* Paragraph Styling */
+.service-offerings-section p {
+    font-size: 1.1rem;
+    color: #dcdcdc;
+    margin: 20px 0 40px;
+    line-height: 1.8;
+}
+
+/* Button Styling */
+.explore-button {
+    display: inline-block;
+    background-color: #ca2828;
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.explore-button:hover {
+    background-color: #28a428;
+    box-shadow: 0 8px 15px rgba(50, 205, 50, 0.2);
+    transform: scale(1.05);
+}
+.services {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.services p {
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+/* Services Section */
+.services {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Spacing between services */
+}
+
+.service {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: linear-gradient(135deg, #000000, #000000);
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.service-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+.service-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.service-content h2 {
+  font-size: 1.8rem;
+  color: #ff6f61;
+  margin-bottom: 10px;
+}
+
+.service-content p {
+  color: #fdfdfd;
+}
+
+/* Accordion Styles */
+.accordion {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #1b242f, #2b3947);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.accordion-header {
+  width: 100%; /* Make header full width */
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 15px 20px;
+  text-align: left;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  display: block;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.accordion-header:hover {
+  background: #463838;
+}
+
+.accordion-header i {
+  transition: transform 0.3s ease;
+}
+
+.accordion-header.active i {
+  transform: rotate(180deg); /* Rotate arrow for active */
+}
+
+.accordion-body {
+  background: #141a23;
+  color: #fffdfd;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.3s ease;
+}
+
+.accordion-body.open {
+  max-height: 300px;
+  opacity: 1;
+  padding: 15px 20px;
+}
+
+.accordion-body ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.accordion-body ul li {
+  margin-bottom: 5px;
+  color: #ff6f61;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service {
+    flex-direction: column;
+  }
+
+  .service-content {
+    text-align: center;
+  }
+
+  .service-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid header position-relative overflow-hidden p-0">
+          <nav class="navbar navbar-expand-lg fixed-top navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <!-- Logo or Brand -->
+            <a href="index.html" class="navbar-brand p-0">
+                <img src="img/logo.png" alt="Logo" > <!-- Adjust size as needed -->
+            </a>
+        
+            <!-- Toggler for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+        
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse w-100" id="navbarCollapse">
+                <!-- Center the Links with Flexbox -->
+                <div class="navbar-nav mx-auto d-flex justify-content-center w-100">
+                    <a href="index.html" class="nav-item nav-link">Who?</a>
+                    <a href="service.html" class="nav-item nav-link active">What?</a>
+                    <a href="work.html" class="nav-item nav-link">Why?</a>
+                </div>
+        
+                <!-- Get in Touch Button on the Right -->
+                <div style="display: inline-block; width: 150px;">
+                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                </div>
+                
+                
+            </div>
+        </nav>
+        <!-- Navbar & Hero End -->
+
+
+         <!-- Dynamic Service Offerings Section Start -->
+<div class="service-offerings-section">
+    <div class="content-wrapper">
+        <h1>Explore Our <span>Dynamic</span></h1>
+        <h1>Service Offerings</h1>
+        <p>
+            <!-- Our commitment to excellence is reflected in our comprehensive solutions, 
+            digital product design services, Low code app development, artificial intelligence, and more. -->
+        </p>
+       
+    </div>
+</div>
+<!-- Dynamic Service Offerings Section End -->
+
+<section class="services">
+    <h1>What we offer?</h1>
+    <p>
+      We transform ideas into impact. From crafting captivating digital campaigns to building unforgettable brands, our services are designed to elevate your business in the digital era.
+    </p>
+  
+    <!-- Digital Marketing -->
+    <div class="service">
+      <div class="service-image">
+        <img src="img/s1.png" alt="Digital Marketing">
+      </div>
+      <div class="service-content">
+        <h2>Digital Marketing</h2>
+        <p>A comprehensive approach to promoting brands through various online channels.</p>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">Social Media Marketing</button>
+            <div class="accordion-body">
+              <p>Utilizing platforms like Facebook, Instagram, and LinkedIn to grow a community and drive conversions.</p>
+              <ul>
+                <li>SM Strategizing</li>
+                <li>SM Management</li>
+                <li>SM Audit</li>
+                <li>Meta Ads</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Paid Ads</button>
+            <div class="accordion-body">
+              <p>Targeted advertising through platforms such as Google Ads and LinkedIn Ads to drive traffic and conversions.</p>
+              <ul>
+                <li>Google Ads</li>
+                <li>LinkedIn Ads</li>
+                <li>Pinterest Ads</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">SEO</button>
+            <div class="accordion-body">
+              <p>Optimizing websites and content to rank higher on search engine results pages (SERPs).</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Market Research</button>
+            <div class="accordion-body">
+              <p>Gathering data to understand customer needs, preferences, and trends in the market.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Social Media Marketing -->
+    <div class="service">
+      <div class="service-image">
+        <img src="img/s2.webp" alt="Social Media Marketing">
+      </div>
+      <div class="service-content">
+        <h2>Social Media Marketing</h2>
+        <p>Engage your audience and build a strong online presence with social media strategies.</p>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">SM Strategizing</button>
+            <div class="accordion-body">
+              <p>Developing data-driven strategies to maximize social media impact and growth.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Meta Ads</button>
+            <div class="accordion-body">
+              <p>Running targeted ad campaigns on Facebook and Instagram to drive engagement and conversions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Paid Ads -->
+    <div class="service">
+      <div class="service-image">
+        <img src="img/s1.png" alt="Paid Ads">
+      </div>
+      <div class="service-content">
+        <h2>Paid Ads</h2>
+        <p>Strategic ad placements to boost visibility and generate leads through multiple platforms.</p>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">Google Ads</button>
+            <div class="accordion-body">
+              <p>Pay-per-click campaigns to increase visibility and attract quality traffic.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">YouTube Ads</button>
+            <div class="accordion-body">
+              <p>Boost brand awareness and engagement with video ads on YouTube.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Bing Ads</button>
+            <div class="accordion-body">
+              <p>Paid search ads on Bing to reach a different audience and increase visibility.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- SEO -->
+    <div class="service">
+      <div class="service-image">
+        <img src="img/s2.webp" alt="SEO">
+      </div>
+      <div class="service-content">
+        <h2>SEO</h2>
+        <p>Enhance organic visibility and attract more qualified traffic through proven strategies.</p>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">On-Page SEO</button>
+            <div class="accordion-body">
+              <p>Optimizing content, meta tags, and keywords to improve rankings.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Off-Page SEO</button>
+            <div class="accordion-body">
+              <p>Building backlinks and external signals to boost authority.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Local SEO</button>
+            <div class="accordion-body">
+              <p>Optimizing for location-based searches to increase visibility in local search results.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Content Marketing -->
+    <div class="service">
+      <div class="service-image">
+        <img src="img/s1.png" alt="Content Marketing">
+      </div>
+      <div class="service-content">
+        <h2>Content Marketing</h2>
+        <p>Attract, engage, and retain customers with valuable, consistent content.</p>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">Blogs</button>
+            <div class="accordion-body">
+              <p>Informative and engaging content to attract and convert your audience.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Email Marketing</button>
+            <div class="accordion-body">
+              <p>Sending personalized and targeted emails to nurture leads and drive conversions.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">WhatsApp Marketing</button>
+            <div class="accordion-body">
+              <p>Using WhatsApp to directly connect with customers, share updates, and drive engagement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Brand Identity -->
+    <div class="service">
+      <div class="service-image">
+        <img src="img/s1.png" alt="Brand Identity">
+      </div>
+      <div class="service-content">
+        <h2>Brand Identity</h2>
+        <p>Building a unique presence in the market through consistent and memorable branding.</p>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">Logo Design</button>
+            <div class="accordion-body">
+              <p>Creating a unique and memorable logo that represents your brand's identity.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Brand Character</button>
+            <div class="accordion-body">
+              <p>Defining the personality and voice of your brand to connect with your audience.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Brand Guidelines</button>
+            <div class="accordion-body">
+              <p>Establishing rules for consistent brand presentation across all platforms and materials.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Creative Production -->
+    <div class="service">
+      <div class="service-image">
+        <img src="img/s1.png" alt="Creative Production">
+      </div>
+      <div class="service-content">
+        <h2>Creative Production</h2>
+        <p>Developing high-quality visual and multimedia content to engage audiences and drive business results.</p>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">Digital Designing</button>
+            <div class="accordion-body">
+              <p>Crafting visually appealing and functional digital assets for online use.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Animation</button>
+            <div class="accordion-body">
+              <p>Creating engaging animations to tell compelling stories and enhance brand messaging.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Product Shoot</button>
+            <div class="accordion-body">
+              <p>Capturing professional product images that highlight features and appeal to customers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Contact Us Section -->
+            <div class="col-md-6 col-lg-6">
+                <div class="footer-item d-flex flex-column">
+                  
+                    <p class="mb-4" style="font-size: 1.5rem; font-weight: 600; color: #df4141; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);">
+                        <i class="fas fa-comments me-2"></i>
+                        Let’s Start a Conversation <span style="color: #ffffff;"> <br>& Build Something Great</span>
+                    </p>
+                    
+                    <a href="mailto:info@3ad4.com" class="mb-2 d-block text-white"><i class="fas fa-envelope me-2"></i> info@3ad4.com</a>
+                    <a href="tel:+917356744434" class="mb-4 d-block text-white"><i class="fas fa-phone me-2"></i> +91 73567 44434</a>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Kochi, Ernakulam, Kerala, India</p>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-share fa-2x text-secondary me-2"></i>
+                        <a class="btn-square btn btn-primary rounded-circle mx-1" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn-square btn btn-primary rounded-circle mx-1" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn-square btn btn-primary rounded-circle mx-1" href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Empty Column for Design Balance -->
+            <div class="col-md-6 col-lg-6"></div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+ 
+
+<!-- Copyright Start -->
+<div class="container-fluid copyright py-4">
+    <div class="container">
+        <div class="row g-4 align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-md-0">
+                <span class="text-white">
+                    <a href="#"><i class="fas fa-copyright text-light me-2"></i>3AD4</a>, All rights reserved. 
+                    <a href="Privacy.html" target="_blank" class="ms-2">Privacy Policy</a>
+                </span>
+            </div>
+            <div class="col-md-6 text-center text-md-end text-white">
+                <span class="text-white">
+                    Designed and developed by 
+                    <a href="https://www.acmeflare.in/" class="">Acmeflare</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
+
+      
+        
+    <!-- JavaScript Libraries -->
+     <script>
+// Select all accordion headers (which are buttons now)
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+accordionHeaders.forEach(header => {
+  header.addEventListener('click', () => {
+    const body = header.nextElementSibling;
+
+    // Check if the body is already expanded
+    const isExpanded = body.classList.contains('open');
+
+    // Close all other accordion bodies
+    accordionHeaders.forEach(otherHeader => {
+      const otherBody = otherHeader.nextElementSibling;
+      if (otherBody !== body && otherBody.classList.contains('open')) {
+        // Close the other accordion
+        otherHeader.classList.remove('active');
+        otherBody.classList.remove('open');
+        otherBody.style.maxHeight = '0';
+        otherBody.style.paddingTop = '0';
+        otherBody.style.paddingBottom = '0';
+      }
+    });
+
+    // Toggle the clicked accordion header and body
+    if (!isExpanded) {
+      header.classList.add('active');
+      body.classList.add('open');
+      body.style.maxHeight = body.scrollHeight + 'px'; // Set dynamic height
+      body.style.paddingTop = '15px'; // Padding for smoothness
+      body.style.paddingBottom = '15px';
+    } else {
+      header.classList.remove('active');
+      body.classList.remove('open');
+      body.style.maxHeight = '0'; // Collapse height
+      body.style.paddingTop = '0'; // Remove padding
+      body.style.paddingBottom = '0';
+    }
+  });
+});
+
+
+
+     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>
